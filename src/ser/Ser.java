@@ -28,17 +28,22 @@ public class Ser {
             while (true) {
                 System.out.println("Cliene conectado ");
 
+                
+                
                 BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
                 String linea = stdIn.readLine();
 
+                PrintWriter pr = new PrintWriter(s.getOutputStream());
+                pr.println("que pasooo : " + linea);
+                pr.flush();
+                
+                
                 InputStreamReader in = new InputStreamReader(s.getInputStream());
                 BufferedReader bf = new BufferedReader(in);
                 String str = bf.readLine();
                 System.out.println("Cliene dijo: " + str);
 
-                PrintWriter pr = new PrintWriter(s.getOutputStream());
-                pr.println("que pasooo : " + linea);
-                pr.flush();
+
             }
         } catch (IOException e) {
             System.out.println("IOException: " + e.getMessage());
