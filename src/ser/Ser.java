@@ -27,16 +27,12 @@ public class Ser {
         try {
             while (true) {
                 System.out.println("Cliene conectado ");
-
-                
-                
                 BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
                 String linea = stdIn.readLine();
 
                 PrintWriter pr = new PrintWriter(s.getOutputStream());
                 pr.println(linea);
                 pr.flush();
-                
                 
                 InputStreamReader in = new InputStreamReader(s.getInputStream());
                 BufferedReader bf = new BufferedReader(in);
