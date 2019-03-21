@@ -39,12 +39,12 @@ public class Ser {
                 String str = bf.readLine();
                 String[] temp=str.split("\\?");
                 String resp="";
-               System.out.println("El cliente dijo: ");
+               //System.out.println("El cliente dijo: ");
                 for(int i=0;i<temp.length;i++){
                     System.out.println(temp[i]);
                 }
 
-                System.out.println("Cliene dijo: " + str);
+                //System.out.println(str);//Clieinte dijo
             }
         } catch (IOException e) {
             System.out.println("IOException: " + e.getMessage());
