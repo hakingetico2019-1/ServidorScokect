@@ -46,16 +46,9 @@ public class Ser {
                System.out.println("El cliente dijo: ");
                 for(int i=0;i<temp.length;i++){
                     System.out.println(temp[i]);
-                    
-
                 }
-                
-                
-                
-                //String str2=str.replaceAll(" ", "\\n");
+
                 System.out.println("Cliene dijo: " + str);
-
-
             }
         } catch (IOException e) {
             System.out.println("IOException: " + e.getMessage());
