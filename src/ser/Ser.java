@@ -34,13 +34,25 @@ public class Ser {
                 String linea = stdIn.readLine();
 
                 PrintWriter pr = new PrintWriter(s.getOutputStream());
-                pr.println("que pasooo : " + linea);
+                pr.println(linea);
                 pr.flush();
                 
                 
                 InputStreamReader in = new InputStreamReader(s.getInputStream());
                 BufferedReader bf = new BufferedReader(in);
                 String str = bf.readLine();
+                String[] temp=str.split("\\?");
+                String resp="";
+               System.out.println("El cliente dijo: ");
+                for(int i=0;i<temp.length;i++){
+                    System.out.println(temp[i]);
+                    
+
+                }
+                
+                
+                
+                //String str2=str.replaceAll(" ", "\\n");
                 System.out.println("Cliene dijo: " + str);
 
 
