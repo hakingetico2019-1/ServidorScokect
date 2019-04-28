@@ -37,6 +37,10 @@ public class Ser {
                 InputStreamReader in = new InputStreamReader(s.getInputStream());
                 BufferedReader bf = new BufferedReader(in);
                 String str = bf.readLine();
+                if(str==null){
+                    str+="";
+                }
+
                 String[] temp=str.split("\\?");
                 String resp="";
                //System.out.println("El cliente dijo: ");
